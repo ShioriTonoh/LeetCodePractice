@@ -5,7 +5,7 @@ public:
     }
 
     int searchLeftBound(vector<int>& nums, int target){
-        if(nums.size() > 1)
+        if(nums.size() > 0)
         {
             int left =0, right = nums.size(), mid = 0;
             while(left<right)
@@ -32,16 +32,12 @@ public:
                 return right;
             }
         }
-        else if(nums.size() == 1 && nums[0] == target)
-        {
-            return 0;
-        }
 
         return -1;
     }
 
     int searchRightBound(vector<int>& nums, int target){
-        if(nums.size() > 1)
+        if(nums.size() > 0)
         {
             int left =0, right = nums.size(), mid = 0;
 
@@ -68,10 +64,6 @@ public:
             {
                 return left-1;
             }
-        }
-        else if(nums.size() == 1 && nums[0] == target)
-        {
-            return 0;
         }
 
         return -1;
